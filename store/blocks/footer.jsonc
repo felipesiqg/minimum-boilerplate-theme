@@ -13,14 +13,25 @@
     ]
   },
   "flex-layout.row#footer": { 
+    "props":{
+      "blockClass": "footer-desktop",
+      "horizintalAlign": "center"
+    },
     "children": [
-      "image"
+      "flex-layout.col#spacer",
+      "login",
+      "login",
+      "login",
+      "login",
+      "flex-layout.col#spacer"
+//      "challenge",
+//      "store",
+//      "support"
     ]
   },
-  "image": {
-    "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
-    }
-  }
+  "flex-layout.col#spacer": {
+        "props": {
+          "width": "grow"
+        }
+      }
 }

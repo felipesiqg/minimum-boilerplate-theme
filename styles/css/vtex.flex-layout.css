@@ -2,12 +2,21 @@
     padding-top: 17px;
     padding-bottom: 17px;
 }
-
-
 .flexRowContent :nth-child(2n){
     width: 40% !important;
     margin-left: 50px;
 }
 .flexRowContent :nth-child(3n), .flexRowContent :nth-child(4n){
     width: 20% !important;
+}
+.flexRowContent--footer-desktop{
+    background-color: #424242;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.flexRowContent--footer-desktop :nth-child(1n){
+    width: 80px !important;
+    margin: 0 2%;
 }
