@@ -1,0 +1,13 @@
+.flexRowContent{
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+
+.flexRowContent :nth-child(2n){
+    width: 40% !important;
+    margin-left: 50px;
+}
+.flexRowContent :nth-child(3n), .flexRowContent :nth-child(4n){
+    width: 20% !important;
+}

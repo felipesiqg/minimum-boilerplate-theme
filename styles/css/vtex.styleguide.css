@@ -1,0 +1,9 @@
+.input.hideDecorators.noAppearance::placeholder{
+    color: #fff;
+}
+.input.hideDecorators.noAppearance{
+    color: #fff;
+}
+.vtex-input-prefix__group{
+    border: none;
+}
