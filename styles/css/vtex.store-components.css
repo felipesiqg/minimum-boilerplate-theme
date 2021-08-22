@@ -20,3 +20,11 @@
 .container{
     padding: 0;
 }
+
+.imageElement--image-challenge{
+    width: 70%;
+    max-width: 960px;
+    border-radius: 30px;
+    height: 100%;
+}
+

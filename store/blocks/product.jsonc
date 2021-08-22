@@ -1,7 +1,27 @@
 {
   "store.product": {
     "children": [
-      
+      "flex-layout.row#product-page"
+    ]
+  },
+  "flex-layout.row#product-page":{
+    "props":{
+      "blockClass": "row-product-page"
+    },
+    "children":[
+      "flex-layout.col#product-page"
+    ]
+  },
+  "flex-layout.col#product-page":{
+    "props":{
+      "blockClass": "col-product-page"
+    },
+    "children":[
+      "product-images",
+//     "product-name", Error resolving block "flex-layout.col#product-page":You're trying to reference a product-name block, but two or more dependencies declare names that match that and I don't know which one you want. Please specify the app name by writing one of these: vtex.product-list:product-name
+      "product-price",
+      "product-description"
     ]
   }
 }
+

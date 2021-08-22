@@ -1,0 +1,19 @@
+.caretIcon{
+    color: #fff;
+    height: 14px;
+}
+.sliderLayoutContainer--slider-challenge{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.paginationDotsContainer{
+    bottom: -30px;
+}
+.paginationDot:active{
+    background-color: chartreuse;
+}
+.slideChildrenContainer--menu-challenge-slider{
+    color: #fff;
+    background-color: #212121;
+
+}

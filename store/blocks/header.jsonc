@@ -15,11 +15,9 @@
       "blockClass": "sticky-header"
     },
     "children": [
-      "flex-layout.row#desktop",
-      "vtex.menu@2.x:menu#category-menu"
-      ]
+      "flex-layout.row#desktop"
+    ]
   },
-
   "flex-layout.row#desktop": {
     "props": {
       "horizontalAlign": "center",
@@ -33,7 +31,6 @@
       "flex-layout.col#logo-desktop",
 //      "flex-layout.col#spacer",
       "search-bar",
-      "minicart.v2", //usando apenas um wish-list-icon enquanto não é liberado o app de wish-list. Depois de liberado trocar para o app
 //    "locale-switcher", ---- código retirado por não ter necessidade de troca de idioma, também retirado do manifest.json
 //    "login", ---- código retirado do header e transferido para o footer
       "minicart.v2"
@@ -89,188 +86,214 @@
       "placeholder": "BUSCAR"
     }
   },
-  "vtex.menu@2.x:menu#category-menu": {
-    "children": [
-      "slider-layout#header-menu"
+    // ADICIONANDO O MINICART
+  // ADICIONANDO O MINICART
+  // ADICIONANDO O MINICART
+  // ADICIONANDO O MINICART
+
+  "minicart-product-list#example": {
+    "blocks": ["product-list"]
+  },
+  "product-list": {
+    "blocks": [
+      "product-list-content-desktop",
+      "product-list-content-mobile"
     ]
   },
-  "slider-layout#header-menu": {
-    "props": {
-      "showNavigationArrows": "always",
-      "showPaginationDots": "never",
-      "itemsPerPage": {"desktop": 7, "tablet": 5}
-    },
+  "product-list-content-desktop": {
+    "children": ["flex-layout.row#list-row.desktop"]
+  },
+  "flex-layout.row#list-row.desktop": {
     "children": [
-      "menu-item#promocao",
-      "menu-item#category-corinthians",
-      "menu-item#category-palmeiras",
-      "menu-item#category-signos",
-      "menu-item#category-divertidos",
-      "menu-item#category-7-maravilhas",
-      "menu-item#category-guerreiros",
-      "menu-item#category-album-1",
-      "menu-item#category-album-2",
-      "menu-item#category-album-3"
-    ]
-  },
-  "menu-item#promocao": {
+      "flex-layout.col#image.desktop",
+      "flex-layout.col#main-container.desktop"
+    ],
     "props": {
-      "id": "menu-item-promocao",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/promocao/",
-        "noFollow": true,
-        "tagTitle": "Promoção",
-        "text": "Promoção"
-      }
+      "fullWidth": true,
+      "paddingBottom": "7",
+      "paddingTop": "6",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true"
     }
   },
-  "menu-item#category-corinthians": {
+  "flex-layout.col#image.desktop": {
+    "children": ["product-list-image"],
     "props": {
-      "id": "menu-item-category-corinthians",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/conrinthians/",
-        "noFollow": true,
-        "tagTitle": "Corinthians",
-        "text": "Corinthians"
-      }
+      "marginRight": "6"
     }
   },
-  "menu-item#category-palmeiras": {
+  "flex-layout.col#main-container.desktop": {
+    "children": [
+      "flex-layout.row#sub-container.desktop",
+      "flex-layout.row#message.desktop"
+    ],
     "props": {
-      "id": "menu-item-category-palmeiras",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/palmeiras/",
-        "noFollow": true,
-        "tagTitle": "Palmeiras",
-        "text": "Palmeiras"
-      }
+      "width": "grow"
     }
   },
-  "menu-item#category-signos": {
+  "flex-layout.row#sub-container.desktop": {
+    "children": [
+      "flex-layout.col#product-description",
+      "flex-layout.col#quantity.desktop",
+      "flex-layout.row#price-remove"
+    ],
     "props": {
-      "id": "menu-item-category-signos",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/signos/",
-        "noFollow": true,
-        "tagTitle": "Signos",
-        "text": "Signos"
-      }
+      "preserveLayoutOnMobile": "true",
+      "colSizing": "auto"
     }
   },
-  "menu-item#category-divertidos": {
+  "flex-layout.col#quantity.desktop": {
+    "children": [
+      "flex-layout.row#quantity-selector.desktop",
+      "flex-layout.row#unit-price.desktop"
+    ],
     "props": {
-      "id": "menu-item-category-divertidos",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/divertidos/",
-        "noFollow": true,
-        "tagTitle": "Divertidos",
-        "text": "Divertidos"
-      }
+      "marginLeft": "8"
     }
   },
-  "menu-item#category-7-maravilhas": {
+  "flex-layout.row#price-remove": {
+    "children": [
+      "flex-layout.col#price.desktop",
+      "flex-layout.col#remove-button.desktop"
+    ],
     "props": {
-      "id": "menu-item-category-7-maravilhas",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/7-maravilhas/",
-        "noFollow": true,
-        "tagTitle": "7-maravilhas",
-        "text": "7-maravilhas"
-      }
+      "colSizing": "auto"
     }
   },
-  "menu-item#category-guerreiros": {
+  "flex-layout.row#quantity-selector.desktop": {
+    "children": ["quantity-selector"],
     "props": {
-      "id": "menu-item-category-guerreiros",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/guerreiros/",
-        "noFollow": true,
-        "tagTitle": "Guerreiros",
-        "text": "Guerreiros"
-      }
+      "preventHorizontalStretch": "true"
     }
   },
-  "menu-item#category-album-1": {
+  "flex-layout.row#unit-price.desktop": {
+    "children": ["unit-price#desktop"],
     "props": {
-      "id": "menu-item-category-album-1",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/album-1/",
-        "noFollow": true,
-        "tagTitle": "Album-1",
-        "text": "Álbum 1"
-      }
+      "marginTop": "3",
+      "preventHorizontalStretch": "true"
     }
   },
-  "menu-item#category-album-2": {
+  "unit-price#desktop": {
     "props": {
-      "id": "menu-item-category-album-2",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/album-2/",
-        "noFollow": true,
-        "tagTitle": "Album-2",
-        "text": "Álbum 2"
-      }
+      "textAlign": "center"
     }
   },
-  "menu-item#category-album-3": {
+  "flex-layout.col#price.desktop": {
+    "children": ["price#desktop"],
     "props": {
-      "id": "menu-item-category-album-3",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "categoryId": 153,
-        "type": "internal",
-        "href": "/album-3/",
-        "noFollow": true,
-        "tagTitle": "Album-3",
-        "text": "Álbum 3"
-      }
+      "blockClass": "priceWrapper",
+      "marginLeft": "6",
+      "preventHorizontalStretch": "true",
+      "verticalAlign": "middle"
+    }
+  },
+  "price#desktop": {
+    "props": {
+      "textAlign": "right"
+    }
+  },
+  "flex-layout.col#remove-button.desktop": {
+    "children": ["remove-button"],
+    "props": {
+      "marginLeft": "6",
+      "verticalAlign": "middle"
+    }
+  },
+  "flex-layout.row#message.desktop": {
+    "children": ["message#desktop"],
+    "props": {
+      "marginTop": "4"
+    }
+  },
+  "message#desktop": {
+    "props": {
+      "layout": "cols"
+    }
+  },
+  "product-list-content-mobile": {
+    "children": ["flex-layout.row#list-row.mobile"]
+  },
+  "flex-layout.row#list-row.mobile": {
+    "children": [
+      "flex-layout.col#image.mobile",
+      "flex-layout.col#main-container.mobile"
+    ],
+    "props": {
+      "fullWidth": true,
+      "paddingBottom": "6",
+      "paddingTop": "5",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true"
+    }
+  },
+  "flex-layout.col#image.mobile": {
+    "children": ["product-list-image"],
+    "props": {
+      "marginRight": "5"
+    }
+  },
+  "flex-layout.col#main-container.mobile": {
+    "children": [
+      "flex-layout.row#top.mobile",
+      "flex-layout.row#quantity-selector.mobile",
+      "flex-layout.row#unit-price.mobile",
+      "flex-layout.row#price.mobile",
+      "flex-layout.row#message.mobile"
+    ],
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.row#top.mobile": {
+    "children": [
+      "flex-layout.col#product-description",
+      "flex-layout.col#remove-button.mobile"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true"
+    }
+  },
+  "flex-layout.row#quantity-selector.mobile": {
+    "children": ["quantity-selector"],
+    "props": {
+      "marginTop": "5",
+      "preventHorizontalStretch": "true"
+    }
+  },
+  "flex-layout.row#unit-price.mobile": {
+    "children": ["unit-price"],
+    "props": {
+      "marginTop": "3"
+    }
+  },
+  "flex-layout.row#price.mobile": {
+    "children": ["price#mobile"],
+    "props": {
+      "marginTop": "5",
+      "preventHorizontalStretch": "true"
+    }
+  },
+  "price#mobile": {
+    "props": {
+      "textAlign": "left"
+    }
+  },
+  "flex-layout.col#remove-button.mobile": {
+    "children": ["remove-button"],
+    "props": {
+      "marginLeft": "3"
+    }
+  },
+  "flex-layout.row#message.mobile": {
+    "children": ["message#mobile"],
+    "props": {
+      "marginTop": "3"
+    }
+  },
+  "message#mobile": {
+    "props": {
+      "layout": "rows"
     }
   }
 }

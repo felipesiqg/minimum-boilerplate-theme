@@ -1,0 +1,9 @@
+.gallery--grid{
+    width: 80%;
+    margin: auto;
+    padding:0;
+}
+.container--layout{
+    justify-content: space-evenly;
+    margin: auto;
+}

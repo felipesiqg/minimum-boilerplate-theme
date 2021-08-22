@@ -19,19 +19,70 @@
     },
     "children": [
       "flex-layout.col#spacer",
-      "login",
-      "login",
-      "login",
-      "login",
+      "flex-layout.col#login",
+      "flex-layout.col#challenge",
+      "flex-layout.col#store",
+      "flex-layout.col#support",
       "flex-layout.col#spacer"
-//      "challenge",
-//      "store",
-//      "support"
     ]
   },
+  "flex-layout.col#login":{
+    "children": [
+//      "image#login", ADICIONAR IMAGEM ACIMA DO TEXTO
+      "login"
+    ],
+    "props":{
+      "blockClass": "col-footer"
+    }
+  },
+  "flex-layout.col#challenge": {
+    "children": [
+//      "image#challenge", ADICIONAR IMAGEM ACIMA DO TEXTO
+      "rich-text#challenge"
+    ],
+    "props":{
+      "blockClass": "col-footer"
+    }
+  },
+  "rich-text#challenge": {
+    "props":{
+      "text": "CHALLENGE",
+      "blockClass": "footer-text"
+    }
+  },
+  "flex-layout.col#store":{
+    "children": [
+//      "image#challenge", ADICIONAR IMAGEM ACIMA DO TEXTO
+      "rich-text#store"
+    ],
+    "props":{
+      "blockClass": "col-footer"
+    }
+  },
+  "rich-text#store": {
+    "props":{
+      "text": "LOJA",
+      "blockClass": "footer-text"
+    }
+  },
+  "flex-layout.col#support":{
+    "children": [
+//      "image#challenge", ADICIONAR IMAGEM ACIMA DO TEXTO
+      "rich-text#support"
+    ],
+    "props":{
+      "blockClass": "col-footer"
+    }
+  },
+  "rich-text#support": {
+    "props":{
+      "text": "[SUPORTE](https://wa.me/5521988807587)",
+      "blockClass": "footer-text"
+    }
+  },
   "flex-layout.col#spacer": {
-        "props": {
-          "width": "grow"
-        }
-      }
+    "props": {
+    "width": "grow"
+    }
+  }
 }

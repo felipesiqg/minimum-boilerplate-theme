@@ -15,8 +15,14 @@
     bottom: 0;
     justify-content: space-evenly;
     padding: 0;
+    height: 50px;
 }
 .flexRowContent--footer-desktop :nth-child(1n){
-    width: 80px !important;
+    width: 100px !important;
     margin: 0 2%;
+}
+.flexRowContent--row-product-page{
+    width: 70vw;
+    margin: auto;
+    margin-bottom: 50px;
 }

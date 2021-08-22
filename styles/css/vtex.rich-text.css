@@ -1,0 +1,13 @@
+.paragraph--footer-text{
+    color: #fff;
+}
+.paragraph--footer-text:active{
+    color: #59FF00;
+}
+.link--footer-text{
+    color: #fff;
+    text-decoration: none;
+}
+.link--footer-text:visited{
+    color: #fff
+}
